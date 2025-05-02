@@ -1,9 +1,9 @@
 ### How to Run this Website/Page?
 
-1. Using git clone this repository by running:
+1. Clone this repository by running:
 
 ```bash
-    git clone
+    git clone https://github.com/nojram00/walang-name-ung-project.git
 ```
 
 2. Run The following commands:
