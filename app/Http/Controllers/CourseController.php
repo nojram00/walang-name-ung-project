@@ -15,14 +15,16 @@ class CourseController extends Controller
         $courses = \App\Models\Course::with(['department', 'instructor'])->get();
 
         // Return a view with the courses data
-        return Inertia::render('courses/index', compact('courses'));
+        // return Inertia::render('courses/index', compact('courses'));
+        return view('pages.courses', compact('courses'));
     }
 
     public function create_view()
     {
         $departments = \App\Models\Department::all();
         $instructors = \App\Models\Instructor::all();
-        return Inertia::render('courses/create/index', compact('departments', 'instructors'));
+        // return Inertia::render('courses/create/index', compact('departments', 'instructors'));
+        return view('pages.create-course', compact('departments', 'instructors'));
     }
 
     public function create(Request $request)

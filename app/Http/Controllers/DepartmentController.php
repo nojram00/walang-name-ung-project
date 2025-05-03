@@ -12,12 +12,14 @@ class DepartmentController extends Controller
         $departments = \App\Models\Department::all();
 
         // Return a view with the departments data
-        return inertia('departments/index', compact('departments'));
+        // return inertia('departments/index', compact('departments'));
+        return view('pages.departments', compact('departments'));
     }
 
     public function create_view()
     {
-        return inertia('departments/create/index');
+        // return inertia('departments/create/index');
+        return view('pages.create-department');
     }
 
     public function create(Request $request)

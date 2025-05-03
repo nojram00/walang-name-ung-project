@@ -15,13 +15,15 @@ class StudentController extends Controller
         $students = \App\Models\Student::with('department')->get();
 
         // Return a view with the students data
-        return Inertia::render('students/index', compact('students'));
+        // return Inertia::render('students/index', compact('students'));
+        return view('pages.students', compact('students'));
     }
 
     public function create_view()
     {
         $departments = Department::all();
-        return Inertia::render('students/create/index', compact('departments'));
+        // return Inertia::render('students/create/index', compact('departments'));
+        return view('pages.create-student', compact('departments'));
     }
 
     public function create(Request $request)

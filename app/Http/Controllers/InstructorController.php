@@ -16,12 +16,14 @@ class InstructorController extends Controller
         $instructors = \App\Models\Instructor::all();
 
         // Return a view with the instructors data
-        return Inertia::render('instructors/index', compact('instructors'));
+        // return Inertia::render('instructors/index', compact('instructors'));
+        return view('pages.instructors', compact('instructors'));
     }
 
     public function create_view()
     {
-        return inertia('instructors/create/index');
+        // return inertia('instructors/create/index');
+        return view('pages.create-instructor');
     }
 
     public function create(Request $request)
